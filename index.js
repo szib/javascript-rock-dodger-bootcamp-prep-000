@@ -63,14 +63,13 @@ function checkCollision(rock) {
       return rockLeftEdge < dodgerRightEdge && rockRightEdge > dodgerRightEdge
     }
   
-  return false
-  // if (top > 360) {
-  //   if (collisionCheck1 || collisionCheck2 || collisionCheck3) {
-  //     return true
-  //   }
-  // } else {
-  //   return false
-  // }
+  if (top > 360) {
+    if (collisionCheck1 || collisionCheck2 || collisionCheck3) {
+      return true
+    }
+  } else {
+    return false
+  }
 }
 
 function createRock(x) {
