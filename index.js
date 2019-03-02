@@ -144,7 +144,9 @@ function moveDodgerRight() {
    }
    
    if (positionToInteger(doger.style.left) < GAME_WIDTH - DODGER_WIDTH) {
-     window.requestAnimationFrame(step)
+     for(let i = 0; i < MOVE_STEP; i++) {
+      window.requestAnimationFrame(step)
+     }
    }
    
 }
