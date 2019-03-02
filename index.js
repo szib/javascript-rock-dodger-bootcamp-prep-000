@@ -52,15 +52,15 @@ function checkCollision(rock) {
      *    and the rock's right edge is > the DODGER's right edge
      */
     function collisionCheck1() {
-      return rockLeftEdge <= dodgerLeftEdge && rockRightEdge >= dodgerLeftEdge
+      return rockLeftEdge < dodgerLeftEdge && rockRightEdge > dodgerLeftEdge
     }
     
     function collisionCheck2() {
-      return rockLeftEdge >= dodgerLeftEdge && rockRightEdge <= dodgerRightEdge
+      return rockLeftEdge > dodgerLeftEdge && rockRightEdge < dodgerRightEdge
     }
     
     function collisionCheck3() {
-      return rockLeftEdge <= dodgerRightEdge && rockRightEdge >= dodgerRightEdge
+      return rockLeftEdge < dodgerRightEdge && rockRightEdge > dodgerRightEdge
     }
   
   if (top > 360) {
