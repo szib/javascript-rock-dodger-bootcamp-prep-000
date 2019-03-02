@@ -128,6 +128,7 @@ function createRock(x) {
  * Finally, alert "YOU LOSE!" to the player.
  */
 function endGame() {
+  isRunning = false
   clearInterval(gameInterval)
   
   for(let i = 0; i<ROCKS.length; i++) {
@@ -169,9 +170,9 @@ function moveDodgerLeft() {
    let left = positionToInteger(DODGER.style.left);
    
    function step(){
-     DODGER.style.left = `${left -= 4}px`
+     DODGER.style.left = `${left -= MOVE_STEP}px`
 
-      if (left > 0){
+      if (isRunning && left > 0){
        window.requestAnimationFrame(step)
      }
    }
@@ -190,9 +191,9 @@ function moveDodgerRight() {
    let left = positionToInteger(DODGER.style.left);
    
    function step(){
-     DODGER.style.left = `${left += 4}px`
+     DODGER.style.left = `${left += MOVE_STEP}px`
 
-      if (left < 360){
+      if (isRunning && left < 360){
        window.requestAnimationFrame(step)
      }
    }
@@ -215,6 +216,8 @@ function start() {
   window.addEventListener('keydown', moveDodger)
 
   START.style.display = 'none'
+  
+  isRunning = true;
 
   gameInterval = setInterval(function() {
     createRock(Math.floor(Math.random() *  (GAME_WIDTH - 20)))
