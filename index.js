@@ -63,7 +63,7 @@ function checkCollision(rock) {
     }
   
   
-  if (top > 360) {
+  if (top >= 360) {
     if (collisionCheck1 || collisionCheck2 || collisionCheck3) {
       return true
     }
