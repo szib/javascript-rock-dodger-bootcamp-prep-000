@@ -108,7 +108,7 @@ function createRock(x) {
      */
      
      if (top < 400){
-      rock.style.top = `${top += 2}px`
+       rock.style.top = `${top += 2}px`
        window.requestAnimationFrame(moveRock)
      } 
     /**
