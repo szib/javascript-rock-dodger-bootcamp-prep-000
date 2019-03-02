@@ -134,7 +134,7 @@ function endGame() {
     ROCKS[i].remove()
   }
   
-  window.removeEventListener(keyEventListener)
+  window.removeEventListener(keyEventListener);
 }
 
 function moveDodger(e) {
