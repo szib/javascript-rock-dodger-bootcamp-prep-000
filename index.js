@@ -136,7 +136,7 @@ function endGame() {
   console.log(ROCKS)
   
   window.removeEventListener('keydown', moveDodger);
-  window.alert('YOU LOSE!')
+  // window.alert('YOU LOSE!')
 }
 
 function moveDodger(e) {
