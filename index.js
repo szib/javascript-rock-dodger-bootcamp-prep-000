@@ -135,18 +135,10 @@ function endGame() {
   }
   
   window.removeEventListener('keydown', moveDodger);
-  // window.alert('YOU LOSE!')
+  window.alert('YOU LOSE!')
 }
 
 function moveDodger(e) {
-  // implement me!
-  /**
-   * This function should call `moveDodgerLeft()`
-   * if the left arrow is pressed and `moveDodgerRight()`
-   * if the right arrow is pressed. (Check the constants
-   * we've declared for you above.)
-   * And be sure to use the functions declared below!
-   */
    if(e.which === LEFT_ARROW || e.which === RIGHT_ARROW) {
      e.preventDefault();
      e.stopPropagation();
@@ -160,11 +152,6 @@ function moveDodger(e) {
 }
 
 function moveDodgerLeft() {
-  // implement me!
-  /**
-   * This function should move DODGER to the left
-   * (mabye 4 pixels?). Use window.requestAnimationFrame()!
-   */
    let left = positionToInteger(DODGER.style.left);
    
    function step(){
@@ -181,11 +168,6 @@ function moveDodgerLeft() {
 }
 
 function moveDodgerRight() {
-  // implement me!
-  /**
-   * This function should move DODGER to the right
-   * (mabye 4 pixels?). Use window.requestAnimationFrame()!
-   */
    let left = positionToInteger(DODGER.style.left);
    
    function step(){
