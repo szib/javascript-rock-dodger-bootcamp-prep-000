@@ -123,6 +123,11 @@ function moveDodger(e) {
    * we've declared for you above.)
    * And be sure to use the functions declared below!
    */
+   if (e.which === LEFT_ARROW) {
+     moveDodgerLeft()
+   } else if (e.which === RIGHT_ARROW ) {
+     moveDodgerRight()
+   }
 }
 
 function moveDodgerLeft() {
@@ -139,15 +144,15 @@ function moveDodgerRight() {
    * This function should move DODGER to the right
    * (mabye 4 pixels?). Use window.requestAnimationFrame()!
    */
-  // function step() {
-  //   dodger.style.left = `${positionToInteger(doger.style.left) + 1}px`;
-  // }
+  function step() {
+    dodger.style.left = `${positionToInteger(doger.style.left) + 1}px`;
+  }
    
-  // if (positionToInteger(doger.style.left) < GAME_WIDTH - DODGER_WIDTH) {
-  //   for(let i = 0; i < MOVE_STEP; i++) {
-  //     window.requestAnimationFrame(step)
-  //   }
-  // }
+  if (positionToInteger(doger.style.left) < GAME_WIDTH - DODGER_WIDTH) {
+    for(let i = 0; i < MOVE_STEP; i++) {
+      window.requestAnimationFrame(step)
+    }
+  }
    
 }
 
