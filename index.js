@@ -172,6 +172,9 @@ function moveDodgerLeft() {
    */
    let left = positionToInteger(DODGER.style.left);
    
+   function step() {
+     
+   }
    
 }
 
