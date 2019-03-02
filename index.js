@@ -134,7 +134,7 @@ function endGame() {
     ROCKS[i].remove()
   }
   
-  window.removeEventListener('keydown', keyEventListener);
+  window.removeEventListener('keydown', moveDodger);
 }
 
 function moveDodger(e) {
@@ -210,7 +210,7 @@ function positionToInteger(p) {
 }
 
 function start() {
-  keyEventListener = window.addEventListener('keydown', moveDodger)
+  window.addEventListener('keydown', moveDodger)
 
   START.style.display = 'none'
 
