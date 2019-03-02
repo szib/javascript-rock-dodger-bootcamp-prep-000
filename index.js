@@ -135,6 +135,7 @@ function endGame() {
   }
   
   window.removeEventListener('keydown', moveDodger);
+  window.alert('YOU LOSE!')
 }
 
 function moveDodger(e) {
