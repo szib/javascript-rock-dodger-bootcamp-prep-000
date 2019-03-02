@@ -90,21 +90,22 @@ function createRock(x) {
      */
     if(checkCollision(rock)) {
       endGame()
-    }
-    /**
-     * Otherwise, if the rock hasn't reached the bottom of
-     * the GAME, we want to move it again.
-     */
-    rock.style.top = `${top += 2}px`
-    
-    /**
-     * But if the rock *has* reached the bottom of the GAME,
-     * we should remove the rock from the DOM
-     */
-    if (top < 400){
-      window.requestAnimationFrame(moveRock)
     } else {
-      rock.remove()
+      /**
+       * Otherwise, if the rock hasn't reached the bottom of
+       * the GAME, we want to move it again.
+       */
+      rock.style.top = `${top += 2}px`
+      
+      /**
+       * But if the rock *has* reached the bottom of the GAME,
+       * we should remove the rock from the DOM
+       */
+      if (top < 400){
+        window.requestAnimationFrame(moveRock)
+      } else {
+        rock.remove()
+      }
     }
   }
 
