@@ -130,13 +130,13 @@ function createRock(x) {
 function endGame() {
   clearInterval(gameInterval)
   
-  // for(let i = 0; i<ROCKS.length; i++) {
-  //   ROCKS[i].remove()
-  // }
-  ROCKS = []
+  for(let i = 0; i<ROCKS.length; i++) {
+    ROCKS[i].remove()
+  }
+  console.log(ROCKS)
   
   window.removeEventListener('keydown', moveDodger);
-  // window.alert('YOU LOSE!')
+  window.alert('YOU LOSE!')
 }
 
 function moveDodger(e) {
