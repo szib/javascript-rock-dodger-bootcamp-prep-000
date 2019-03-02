@@ -19,6 +19,7 @@ var gameInterval = null
  
 // The doger is moved by MOVE_STEP pixels
 const MOVE_STEP = 4;
+const DODGER_WIDTH = 40;
 
 function checkCollision(rock) {
   // implement me!
@@ -139,7 +140,9 @@ function moveDodgerRight() {
    * (mabye 4 pixels?). Use window.requestAnimationFrame()!
    */
    let dodgerPos = dodger.style.left
-   if (dodgerPos < )
+   if (dodgerPos < GAME_WIDTH - DODGER_WIDTH) {
+     window.requestAnimationFrame()
+   }
 }
 
 /**
