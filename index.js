@@ -32,43 +32,43 @@ function checkCollision(rock) {
   // GAME_HEIGHT - 20 - 20 = 360px;
   
   if (top > 360) {
-  const dodgerLeftEdge = positionToInteger(DODGER.style.left);
-
-  // FIXME: The DODGER is 40 pixels wide -- how do we get the right edge?
-  const dodgerRightEdge = dodgerLeftEdge + DODGER_WIDTH;
-
-  const rockLeftEdge = positionToInteger(rock.style.left)
-
-  // FIXME: The rock is 20 pixel's wide -- how do we get the right edge?
-  const rockRightEdge = rockLeftEdge + ROCK_WIDTH;
+    const dodgerLeftEdge = positionToInteger(DODGER.style.left);
   
-    /**
-     * Think about it -- what's happening here?
-     * There's been a collision if one of three things is true:
-     * 1. The rock's left edge is < the DODGER's left edge,
-     *    and the rock's right edge is > the DODGER's left edge;
-     * 2. The rock's left edge is > the DODGER's left edge,
-     *    and the rock's right edge is < the DODGER's right edge;
-     * 3. The rock's left edge is < the DODGER's right edge,
-     *    and the rock's right edge is > the DODGER's right edge
-     */
-    function collisionCheck1() {
-      return rockLeftEdge < dodgerLeftEdge && rockRightEdge > dodgerLeftEdge
-    }
+    // FIXME: The DODGER is 40 pixels wide -- how do we get the right edge?
+    const dodgerRightEdge = dodgerLeftEdge + DODGER_WIDTH;
+  
+    const rockLeftEdge = positionToInteger(rock.style.left)
+  
+    // FIXME: The rock is 20 pixel's wide -- how do we get the right edge?
+    const rockRightEdge = rockLeftEdge + ROCK_WIDTH;
     
-    function collisionCheck2() {
-      return rockLeftEdge > dodgerLeftEdge && rockRightEdge < dodgerRightEdge
-    }
-    
-    function collisionCheck3() {
-      return rockLeftEdge < dodgerRightEdge && rockRightEdge > dodgerRightEdge
-    }
-    
-    if (collisionCheck1 || collisionCheck2 || collisionCheck3) {
-        return true
-    } else {
-      return false
-    }
+      /**
+       * Think about it -- what's happening here?
+       * There's been a collision if one of three things is true:
+       * 1. The rock's left edge is < the DODGER's left edge,
+       *    and the rock's right edge is > the DODGER's left edge;
+       * 2. The rock's left edge is > the DODGER's left edge,
+       *    and the rock's right edge is < the DODGER's right edge;
+       * 3. The rock's left edge is < the DODGER's right edge,
+       *    and the rock's right edge is > the DODGER's right edge
+       */
+      function collisionCheck1() {
+        return rockLeftEdge < dodgerLeftEdge && rockRightEdge > dodgerLeftEdge
+      }
+      
+      function collisionCheck2() {
+        return rockLeftEdge > dodgerLeftEdge && rockRightEdge < dodgerRightEdge
+      }
+      
+      function collisionCheck3() {
+        return rockLeftEdge < dodgerRightEdge && rockRightEdge > dodgerRightEdge
+      }
+      
+      if (collisionCheck1 || collisionCheck2 || collisionCheck3) {
+          return true
+      } else {
+        return false
+      }
   }
   
 }
