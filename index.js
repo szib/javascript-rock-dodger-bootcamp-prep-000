@@ -20,6 +20,7 @@ var gameInterval = null
 // The doger is moved by MOVE_STEP pixels
 const MOVE_STEP = 4;
 const DODGER_WIDTH = 40;
+const ROCK_WIDTH = 20;
 
 function checkCollision(rock) {
   // implement me!
@@ -38,7 +39,7 @@ function checkCollision(rock) {
   const rockLeftEdge = positionToInteger(rock.style.left)
 
   // FIXME: The rock is 20 pixel's wide -- how do we get the right edge?
-  const rockRightEdge = rockLeftEdge + 20;
+  const rockRightEdge = rockLeftEdge + ROCK_WIDTH;
   
     /**
      * Think about it -- what's happening here?
