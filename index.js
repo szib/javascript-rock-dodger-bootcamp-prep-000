@@ -16,6 +16,9 @@ var gameInterval = null
  * Be aware of what's above this line,
  * but all of your work should happen below.
  */
+ 
+// The doger is moved by MOVE_STEP pixels
+const MOVE_STEP = 4;
 
 function checkCollision(rock) {
   // implement me!
@@ -135,6 +138,7 @@ function moveDodgerRight() {
    * This function should move DODGER to the right
    * (mabye 4 pixels?). Use window.requestAnimationFrame()!
    */
+   let dodgerPos = dodger.
 }
 
 /**
