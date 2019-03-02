@@ -194,7 +194,7 @@ function moveDodgerRight() {
    let left = positionToInteger(DODGER.style.left);
    
    function step(){
-     DODGER.style.left = `${left -= 4}px`
+     DODGER.style.left = `${left += 4}px`
 
       if (left < 360){
        window.requestAnimationFrame(step)
