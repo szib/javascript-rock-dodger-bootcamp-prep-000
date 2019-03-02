@@ -67,8 +67,10 @@ function checkCollision(rock) {
     if (collisionCheck1 || collisionCheck2 || collisionCheck3) {
       return true
     }
-  }
+  } else {
+    
   return false
+  }
 }
 
 function createRock(x) {
